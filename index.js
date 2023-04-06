@@ -2,7 +2,8 @@
 const productOfTwo = (a,b) => {
     return a*b;
 }
-console.log(productOfTwo(5,7));
+// console.log(productOfTwo(5,7));
+
 
 let person = {
     name: "Max",
@@ -12,7 +13,14 @@ let person = {
     }
 }
 
-person.greet(); //undefined
+// person.greet(); //undefined
+
+//Destructuring
+const printName = ({name}) => {
+    console.log(name);
+}
+
+// printName(person)
 
 //Map function
 const fruits = ['apple', 'oranges' , ' ', 'mango', ' ' , 'lemon'];
@@ -24,17 +32,26 @@ const newFruits = fruits.map((fruit) => {
     }
 });
 
-console.log(newFruits);
+// console.log(newFruits);
+
+
+//Async/Await
+const printSequence = async () => {
+    console.log('a');
+    console.log('b');
+    await Promise.resolve();
+    console.log('c');
+    await Promise.resolve();
+    console.log('d');
+    console.log('e');
+  }
+  
+  printSequence();
 
 
 
 
-const obj1 = {'key1': 1 , 'key2' : 2}
-
-const obj2 = { ...obj1, key1: 1000}
 
 
 
-console.log(obj1)
 
-console.log(obj2)
